@@ -100,6 +100,7 @@
         <Button id="btn_init" taborder="6" text="Init" left="573" top="30" width="77" height="35" onclick="Button02_onclick" font="bold 20px/normal &quot;Malgun Gothic&quot;" accessibilityrole="button"/>
         <Button id="btn_add" taborder="7" left="855" top="30" width="91" height="34" onclick="Button00_onclick" font="bold 20px/normal &quot;Malgun Gothic&quot;" text="Add"/>
         <Button id="btn_del" taborder="8" left="980" top="30" width="90" height="34" text="Delete" font="bold 20px/normal &quot;Malgun Gothic&quot;" onclick="btn_del_onclick"/>
+        <Button id="Button00" taborder="9" text="duong-test" left="108" top="667" width="158" height="37"/>
       </Layout>
       <Layout height="720" mobileorientation="Landscape" name="Layout0" type="default" width="1280"/>
     </Layouts>
