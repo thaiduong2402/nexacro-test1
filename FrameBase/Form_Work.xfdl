@@ -101,7 +101,9 @@
         <Button id="btn_add" taborder="7" left="855" top="30" width="91" height="34" onclick="Button00_onclick" font="bold 20px/normal &quot;Malgun Gothic&quot;" text="Add"/>
         <Button id="btn_del" taborder="8" left="980" top="30" width="90" height="34" text="Delete" font="bold 20px/normal &quot;Malgun Gothic&quot;" onclick="btn_del_onclick"/>
         <Button id="Button00" taborder="9" text="duong-test" left="108" top="667" width="158" height="37"/>
-        <Button id="Button01" taborder="10" text="test2" left="320" top="660" width="120" height="50"/>
+        <Button id="Button01" taborder="10" text="test2" left="320" top="660" width="120" height="50" onclick="Button01_onclick"/>
+        <Button id="Button02" taborder="11" text="Button02" left="476" top="654" width="202" height="50"/>
+        <Button id="Button03" taborder="12" text="Button03" left="728" top="659" width="125" height="56"/>
       </Layout>
       <Layout height="720" mobileorientation="Landscape" name="Layout0" type="default" width="1280"/>
     </Layouts>
@@ -152,25 +154,25 @@ this.Div00_Div00_00_Radio01_onitemchanged = function(obj:nexacro.Radio,e:nexacro
 
 this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-this.transaction(
-	"strSave",
-	"ScvUrl::save_emp.jsp?arg=1&arg2=2",
-	"in_emp = emp:U",
-	"",
-	"arg=1 arg=" + nexacro.wrapQuote("2 3"),
-	"fn_call"
+	this.transaction(
+		"strSave",
+		"ScvUrl::save_emp.jsp?arg=1&arg2=2",
+		"in_emp = emp:U",
+		"",
+		"arg=1 arg=" + nexacro.wrapQuote("2 3"),
+		"fn_call"
 	);	
 };
 
 this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	this.transaction(
-	"strSelect",
-	"ScvUrl::select_emp.jsp?arg=1&arg2=2",
-	"",
-	"emp=out_emp",
-	"arg=1 arg=" + nexacro.wrapQuote("2 3"),
-	"fn_call"
+		"strSelect",
+		"ScvUrl::select_emp.jsp?arg=1&arg2=2",
+		"",
+		"emp=out_emp",
+		"arg=1 arg=" + nexacro.wrapQuote("2 3"),
+		"fn_call"
 	);
 };
 
@@ -185,8 +187,9 @@ this.fn_call = function(scvid, ecd, emsg)
 		{
 			alert("saved")
 		}
-	
-	} else {
+		
+	} else 
+	{
 		alert("Error " + ecd + ":" + emsg)
 	}
 	
@@ -194,7 +197,7 @@ this.fn_call = function(scvid, ecd, emsg)
 
 this.btn_search_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-
+	
 	/*var objChildFrame = new ChildFrame();  
     objChildFrame.init("childframe00", "absolute", 0, 0, 300, 300);
     objChildFrame.set_border("1px solid #999999");
@@ -203,7 +206,7 @@ this.btn_search_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
     objChildFrame.set_resizable(true);
     objChildFrame.set_overlaycolor("rgba(255,0,0,0.3)");
     objChildFrame.showModal(this.getOwnerFrame());*/
-
+	
 };
 
 this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -220,12 +223,12 @@ this.btn_del_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 this.Form_Work_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
 	this.transaction(
-	"strCode",
-	"ScvUrl::select_code.jsp?arg=1&arg2=2",
-	"",
-	"ds_deparmant = out_dept",
-	"arg=1 arg=" + nexacro.wrapQuote("2 3"),
-	"fn_call"
+		"strCode",
+		"ScvUrl::select_code.jsp?arg=1&arg2=2",
+		"",
+		"ds_deparmant = out_dept",
+		"arg=1 arg=" + nexacro.wrapQuote("2 3"),
+		"fn_call"
 	);	
 };
 ]]></Script>
