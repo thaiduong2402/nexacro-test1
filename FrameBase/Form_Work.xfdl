@@ -103,7 +103,6 @@
         <Button id="Button00" taborder="9" text="duong-test" left="108" top="667" width="158" height="37"/>
         <Button id="Button01" taborder="10" text="test2" left="320" top="660" width="120" height="50" onclick="Button01_onclick"/>
         <Button id="Button02" taborder="11" text="Button02" left="476" top="654" width="202" height="50"/>
-        <Button id="Button03" taborder="12" text="Button03" left="728" top="659" width="125" height="56"/>
       </Layout>
       <Layout height="720" mobileorientation="Landscape" name="Layout0" type="default" width="1280"/>
     </Layouts>
